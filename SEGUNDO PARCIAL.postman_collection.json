@@ -1,0 +1,771 @@
+{
+	"info": {
+		"_postman_id": "5a9c213c-086c-4ccf-afa5-16644b3328d4",
+		"name": "SEGUNDO PARCIAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29694268"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ID",
+							"value": "684408",
+							"type": "text"
+						},
+						{
+							"key": "Clave",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AltaCliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Nombre",
+							"value": "Juan Carlos",
+							"type": "text"
+						},
+						{
+							"key": "Apellido",
+							"value": "Batman",
+							"type": "text"
+						},
+						{
+							"key": "TipoDocumento",
+							"value": "Pasaporte",
+							"type": "text"
+						},
+						{
+							"key": "NroDocumento",
+							"value": "25654123",
+							"type": "text"
+						},
+						{
+							"key": "Clave",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "correo@correo.com",
+							"type": "text"
+						},
+						{
+							"key": "Telefono",
+							"value": "3115426",
+							"type": "text"
+						},
+						{
+							"key": "Pais",
+							"value": "Burzaco",
+							"type": "text"
+						},
+						{
+							"key": "Ciudad",
+							"value": "Wilde",
+							"type": "text"
+						},
+						{
+							"key": "TipoCliente",
+							"value": "Corporativo",
+							"type": "text"
+						},
+						{
+							"key": "Imagen",
+							"type": "file",
+							"src": "/home/max/Descargas/Batman.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/alta",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"cliente",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarClientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ID_Cliente",
+							"value": "684322",
+							"type": "text"
+						},
+						{
+							"key": "Tipo_Cliente",
+							"value": "Individual",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/consultar",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"cliente",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AltaReserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "TipoCliente",
+							"value": "Corporativo",
+							"type": "text"
+						},
+						{
+							"key": "ID_Cliente",
+							"value": "684412",
+							"type": "text"
+						},
+						{
+							"key": "Ingreso",
+							"value": "2023-11-28",
+							"type": "text"
+						},
+						{
+							"key": "Salida",
+							"value": "2023-12-10",
+							"type": "text"
+						},
+						{
+							"key": "TipoHabitacion",
+							"value": "Doble",
+							"type": "text"
+						},
+						{
+							"key": "Importe",
+							"value": "3600",
+							"type": "text"
+						},
+						{
+							"key": "Imagen",
+							"type": "file",
+							"src": "/home/max/_/Telegram/Telegram Images/-5991013975720047144_121.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/alta",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservaA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/fecha?fecha=2023-10-24",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"fecha"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2023-10-24"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservaB",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/idcliente?idCliente=684336",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"idcliente"
+					],
+					"query": [
+						{
+							"key": "idCliente",
+							"value": "684336"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservaC",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/desdehasta?desde=2022-10-24&hasta=2023-12-01",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"desdehasta"
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "2022-10-24"
+						},
+						{
+							"key": "hasta",
+							"value": "2023-12-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservaD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/tipohabitacion?tipoHabitacion=Doble",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"tipohabitacion"
+					],
+					"query": [
+						{
+							"key": "tipoHabitacion",
+							"value": "Doble"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BajaCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/baja?ID=684409&TipoCliente=Corporativo",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"cliente",
+						"baja"
+					],
+					"query": [
+						{
+							"key": "ID",
+							"value": "684409"
+						},
+						{
+							"key": "TipoCliente",
+							"value": "Corporativo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BajaReserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/baja?ID_Reserva=58661",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"baja"
+					],
+					"query": [
+						{
+							"key": "ID_Reserva",
+							"value": "58661"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservasA2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/a2?fecha=2023-11-26",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"a2"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2023-11-26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservasB2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/b2?ID_Cliente=684336",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"b2"
+					],
+					"query": [
+						{
+							"key": "ID_Cliente",
+							"value": "684336"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservasC2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/c2?desde=2023-11-15&hasta=2023-11-26",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"c2"
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "2023-11-15"
+						},
+						{
+							"key": "hasta",
+							"value": "2023-11-26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservasD2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/d2?TipoCliente=Individual",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"d2"
+					],
+					"query": [
+						{
+							"key": "TipoCliente",
+							"value": "Individual"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservasE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/e?ID_Cliente=684336",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"e"
+					],
+					"query": [
+						{
+							"key": "ID_Cliente",
+							"value": "684336"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarReservasF",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/f?Pago=Tarjeta de credito",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"consultar",
+						"f"
+					],
+					"query": [
+						{
+							"key": "Pago",
+							"value": "Tarjeta de credito"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarCliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"ID\": 684418,\n        \"Nombre\": \"Max\",\n        \"Apellido\": \"Payne\",\n        \"TipoDocumento\": \"DNI\",\n        \"NroDocumento\": \"33456789\",\n        \"Pais\": \"EEUU\",\n        \"Ciudad\": \"New York\",\n        \"Email\": \"mail@mail.com\",\n        \"Telefono\": 5556013,\n        \"TipoCliente\": \"CORPO-DNI\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/modificar",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"cliente",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarReserva",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"ID_Reserva\": 58661,\n        \"ID_Cliente\": 684412,\n        \"TipoCliente\": \"Corporativo\",\n        \"TipoHabitacion\": \"Doble\",\n        \"Ingreso\": \"2023-11-28\",\n        \"Salida\": \"2023-12-10\",\n        \"ImporteTotal\": 3600,\n        \"Pago\": \"Guita del estanciero\",\n        \"Comentario\": \"Cambio en la forma de pago\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/modificar",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SEGUNDO_PARCIAL",
+						"app",
+						"reserva",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
