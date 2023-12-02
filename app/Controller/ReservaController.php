@@ -55,6 +55,10 @@ class ReservaController
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+        finally
+        {
+            Logger::LogTodos("AltaReserva");
+        }
     }
 
     public static function BajaReserva(Request $request, Response $response, $args)
@@ -75,11 +79,16 @@ class ReservaController
                 $response->getBody()->write($payload);
                 return $response->withHeader('Content-Type', 'application/json');
             }
+            finally
+            {
+                Logger::LogTodos("BajaCliente");
+            }
         }
         else
         {
             $payload = json_encode("Numero de reserva no existe o fue dada de baja");
             $response->getBody()->write($payload);
+            Logger::LogTodos("BajaReserva");
             return $response->withHeader('Content-Type', 'application/json');
         }
     }
@@ -111,6 +120,10 @@ class ReservaController
                 $response->getBody()->write($payload);
                 return $response->withHeader('Content-Type', 'application/json');
             }
+            finally
+            {
+                Logger::LogTodos("ModificarCliente");
+            }
         }
         else
         {
@@ -136,6 +149,10 @@ class ReservaController
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+        finally
+        {
+            Logger::LogTodos("ListarReservasA");
+        }
     }
 
     public static function ListarReservasB(Request $request, Response $response, $args)
@@ -153,6 +170,10 @@ class ReservaController
             $payload = json_encode("Error al buscar reservas. {$e->getMessage()}");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
+        }
+        finally
+        {
+            Logger::LogTodos("ListarReservasB");
         }
     }
 
@@ -173,6 +194,10 @@ class ReservaController
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+        finally
+        {
+            Logger::LogTodos("ListarReservasC");
+        }
     }
 
     public static function ListarReservasD(Request $request, Response $response, $args)
@@ -190,6 +215,10 @@ class ReservaController
             $payload = json_encode("Error al buscar reservas. {$e->getMessage()}");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
+        }
+        finally
+        {
+            Logger::LogTodos("ListarReservasD");
         }
     }
 
@@ -209,6 +238,10 @@ class ReservaController
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+        finally
+        {
+            Logger::LogTodos("ListarReservasA2");
+        }
     }
 
     public static function ListarReservasB2(Request $request, Response $response, $args)
@@ -226,6 +259,10 @@ class ReservaController
             $payload = json_encode("Error al buscar reservas. {$e->getMessage()}");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
+        }
+        finally
+        {
+            Logger::LogTodos("ListarReservasB2");
         }
     }
 
@@ -246,6 +283,10 @@ class ReservaController
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+        finally
+        {
+            Logger::LogTodos("ListarReservasC2");
+        }
     }
 
     public static function ListarReservasD2(Request $request, Response $response, $args)
@@ -263,6 +304,10 @@ class ReservaController
             $payload = json_encode("Error al buscar reservas. {$e->getMessage()}");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
+        }
+        finally
+        {
+            Logger::LogTodos("ListarReservasD2");
         }
     }
 
@@ -282,6 +327,10 @@ class ReservaController
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+        finally
+        {
+            Logger::LogTodos("ListarReservasE");
+        }
     }
 
     public static function ListarReservasF(Request $request, Response $response, $args)
@@ -299,6 +348,10 @@ class ReservaController
             $payload = json_encode("Error al buscar reservas. {$e->getMessage()}");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
+        }
+        finally
+        {
+            Logger::LogTodos("ListarReservasF");
         }
     }
 }

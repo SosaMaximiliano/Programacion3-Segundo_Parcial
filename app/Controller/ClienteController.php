@@ -5,6 +5,8 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 include_once './Model/Cliente.php';
 include_once './Model/Reserva.php';
+include_once './Utils/Utils.php';
+include_once './Utils/Logger.php';
 
 class ClienteController
 {
@@ -25,7 +27,10 @@ class ClienteController
         $archivo = $request->getUploadedFiles()['Imagen'];
 
         if (Cliente::ExisteCliente($nombre, $apellido, $tipoDoc, $nroDoc))
+        {
+            Logger::LogTodos("AltaCliente");
             throw new Exception("El cliente ya se encuentra ingresado");
+        }
         try
         {
             switch ($tipo)
@@ -39,7 +44,7 @@ class ClienteController
             }
 
             $idCliente = Cliente::AltaCliente($nombre, $apellido, $tipoDoc, $nroDoc, $clave, $email, $tel, $pais, $ciudad, $tipoAux);
-
+            Logger::LogOK("AltaCliente", $idCliente);
             try
             {
                 Cliente::CargarImagen($idCliente, $tipo, $archivo);
@@ -59,6 +64,10 @@ class ClienteController
             $payload = json_encode("Error al ingresar cliente. {$e->getMessage()}");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
+        }
+        finally
+        {
+            Logger::LogTodos("AltaCliente");
         }
     }
 
@@ -109,11 +118,16 @@ class ClienteController
                 $response->getBody()->write($payload);
                 return $response->withHeader('Content-Type', 'application/json');
             }
+            finally
+            {
+                Logger::LogTodos("BajaCliente");
+            }
         }
         else
         {
             $payload = json_encode("El cliente $idCliente no existe o fue dado de baja");
             $response->getBody()->write($payload);
+            Logger::LogTodos("BajaCliente");
             return $response->withHeader('Content-Type', 'application/json');
         }
     }
@@ -148,11 +162,16 @@ class ClienteController
                 $response->getBody()->write($payload);
                 return $response->withHeader('Content-Type', 'application/json');
             }
+            finally
+            {
+                Logger::LogTodos("modificarCliente");
+            }
         }
         else
         {
             $payload = json_encode("El cliente no existe o fue dado de baja.");
             $response->getBody()->write($payload);
+            Logger::LogTodos("ModificarCliente");
             return $response->withHeader('Content-Type', 'application/json');
         }
     }
@@ -174,6 +193,10 @@ class ClienteController
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+        finally
+        {
+            Logger::LogTodos("ConsultarCliente");
+        }
     }
 
     public static function ListarClientes(Request $request, Response $response, $args)
@@ -190,6 +213,10 @@ class ClienteController
             $payload = json_encode("Error al listar clientes. {$ex->getMessage()}");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
+        }
+        finally
+        {
+            Logger::LogTodos("ListarClientes");
         }
     }
 }

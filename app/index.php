@@ -12,17 +12,20 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/./db/AccesoDatos.php';
 require __DIR__ . '/./Controller/ReservaController.php';
 require __DIR__ . '/./Controller/ClienteController.php';
+require __DIR__ . '/./Controller/UsuarioController.php';
 require __DIR__ . '/./Controller/AuthJWTController.php';
 require __DIR__ . '/./Middleware/CheckTokenMiddleware.php';
 require __DIR__ . '/./Middleware/CheckAltaClienteMW.php';
 require __DIR__ . '/./Middleware/CheckAltaReservaMW.php';
+require __DIR__ . '/./Middleware/CheckGerenteMW.php';
+require __DIR__ . '/./Middleware/CheckOtrosMW.php';
 
 
 // Instantiate App
 $app = AppFactory::create();
 
 // Set base path
-$app->setBasePath('/SEGUNDO_PARCIAL/app');
+$app->setBasePath('/Programacion3-Segundo_Parcial/app');
 
 // Add error middleware
 $app->addErrorMiddleware(true, true, true);
@@ -31,25 +34,29 @@ $app->addErrorMiddleware(true, true, true);
 $app->addBodyParsingMiddleware();
 
 // Routes
-
 $app->post('/login', \AuthJWTController::class . ':CrearTokenLogin');
+
+$app->group('/usuario', function (RouteCollectorProxy $group)
+{
+    $group->post('/alta', \UsuarioController::class . ':AltaUsuario');
+});
 
 $app->group('/cliente', function (RouteCollectorProxy $group)
 {
-    $group->post('/alta', \ClienteController::class . ':AltaCliente')->add(new CheckAltaClienteMW());
-    $group->delete('/baja', \ClienteController::class . ':BajaCliente');
+    $group->post('/alta', \ClienteController::class . ':AltaCliente')->add(new CheckAltaClienteMW())->add(new CheckGerenteMW());
+    $group->delete('/baja', \ClienteController::class . ':BajaCliente')->add(new CheckGerenteMW());
     $group->put('/modificar', \ClienteController::class . ':ModificarCliente');
-    $group->post('/consultar', \ClienteController::class . ':ListarClientes');
-    $group->post('/consultar/id', \ClienteController::class . ':ConsultarClientePorID');
+    $group->post('/consultar', \ClienteController::class . ':ListarClientes')->add(new CheckOtrosMW());
+    $group->post('/consultar/id', \ClienteController::class . ':ConsultarClientePorID')->add(new CheckOtrosMW());
 })->add(new CheckTokenMiddleware());
 
 
 $app->group('/reserva', function (RouteCollectorProxy $group)
 {
-    $group->post('/alta', \ReservaController::class . ':AltaReserva')->add(new CheckAltaReservaMW());
-    $group->delete('/baja', \ReservaController::class . ':BajaReserva');
-    $group->put('/modificar', \ReservaController::class . ':ModificarReserva');
-    $group->get('/consultar', \ReservaController::class . ':ListarReservas');
+    $group->post('/alta', \ReservaController::class . ':AltaReserva')->add(new CheckAltaReservaMW())->add(new CheckOtrosMW());
+    $group->delete('/baja', \ReservaController::class . ':BajaReserva')->add(new CheckOtrosMW());
+    $group->put('/modificar', \ReservaController::class . ':ModificarReserva')->add(new CheckOtrosMW());
+    $group->get('/consultar', \ReservaController::class . ':ListarReservas')->add(new CheckOtrosMW());
     $group->get('/consultar/a2', \ReservaController::class . ':ListarReservasA2');
     $group->get('/consultar/b2', \ReservaController::class . ':ListarReservasB2');
     $group->get('/consultar/c2', \ReservaController::class . ':ListarReservasC2');
