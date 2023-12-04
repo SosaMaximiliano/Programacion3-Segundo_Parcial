@@ -7,6 +7,46 @@
 	},
 	"item": [
 		{
+			"name": "AltaUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "User",
+							"value": "eljefe01",
+							"type": "text"
+						},
+						{
+							"key": "Pass",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "Rol",
+							"value": "Gerente",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/usuario/alta",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion3-Segundo_Parcial",
+						"app",
+						"usuario",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Login",
 			"request": {
 				"method": "POST",
@@ -15,24 +55,29 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "ID",
-							"value": "684408",
+							"key": "User",
+							"value": "recep01",
 							"type": "text"
 						},
 						{
-							"key": "Clave",
+							"key": "Pass",
 							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "Rol",
+							"value": "Recepcionista",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/login",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/login",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"login"
 					]
@@ -48,7 +93,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE1Mjk2NzQsImV4cCI6MTcwMTU4OTY3NCwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjEsIlVzZXIiOiJlbGplZmUwMSIsIlBhc3MiOiIkMnkkMTAkMk01VkZKc2FLYUVOLmVGTThyQWM2LjFcL0pCeHppSGpaR3hETWQ0T3YzVkcuSEpReFUwYmlhIiwiUm9sIjoiR2VyZW50ZSJ9LCJhcHAiOiJTZWd1bmRvIHBhcmNpYWwifQ.YMKMO0wW0_aCjmpZZ2ox6OvuVH5VdCGhf881Y9WmL2U",
 							"type": "string"
 						}
 					]
@@ -60,27 +105,27 @@
 					"formdata": [
 						{
 							"key": "Nombre",
-							"value": "Juan Carlos",
+							"value": "Moe",
 							"type": "text"
 						},
 						{
 							"key": "Apellido",
-							"value": "Batman",
+							"value": "Howard",
 							"type": "text"
 						},
 						{
 							"key": "TipoDocumento",
-							"value": "Pasaporte",
+							"value": "DNI",
 							"type": "text"
 						},
 						{
 							"key": "NroDocumento",
-							"value": "25654123",
+							"value": "33456789",
 							"type": "text"
 						},
 						{
 							"key": "Clave",
-							"value": "123456789",
+							"value": "alfa1234",
 							"type": "text"
 						},
 						{
@@ -111,17 +156,17 @@
 						{
 							"key": "Imagen",
 							"type": "file",
-							"src": "/home/max/Descargas/Batman.jpeg"
+							"src": "/home/max/Descargas/max-payne.png"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/alta",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/cliente/alta",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"cliente",
 						"alta"
@@ -138,7 +183,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -161,12 +206,12 @@
 					]
 				},
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/consultar",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/cliente/consultar",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"cliente",
 						"consultar"
@@ -231,12 +276,12 @@
 					]
 				},
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/alta",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/alta",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"alta"
@@ -253,7 +298,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -261,12 +306,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/fecha?fecha=2023-10-24",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/fecha?fecha=2023-10-24",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -290,7 +335,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -298,12 +343,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/idcliente?idCliente=684336",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/idcliente?idCliente=684412",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -312,7 +357,7 @@
 					"query": [
 						{
 							"key": "idCliente",
-							"value": "684336"
+							"value": "684412"
 						}
 					]
 				}
@@ -327,7 +372,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -335,12 +380,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/desdehasta?desde=2022-10-24&hasta=2023-12-01",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/desdehasta?desde=2022-10-24&hasta=2023-12-01",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -368,7 +413,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -376,12 +421,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/tipohabitacion?tipoHabitacion=Doble",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/tipohabitacion?tipoHabitacion=Doble",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -400,15 +445,25 @@
 		{
 			"name": "BajaCliente",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDk2NjYsImV4cCI6MTcwMjE0OTY2NiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjEsIlVzZXIiOiJlbGplZmUwMSIsIlBhc3MiOiIkMnkkMTAkMk01VkZKc2FLYUVOLmVGTThyQWM2LjFcL0pCeHppSGpaR3hETWQ0T3YzVkcuSEpReFUwYmlhIiwiUm9sIjoiR2VyZW50ZSJ9LCJhcHAiOiJTZWd1bmRvIHBhcmNpYWwifQ.k4mmj5x-lMOixXFBgcKKILOFjHRSINvdkZPP-E4zpoc",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/baja?ID=684409&TipoCliente=Corporativo",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/cliente/baja?ID=684412&TipoCliente=Corporativo",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"cliente",
 						"baja"
@@ -416,7 +471,7 @@
 					"query": [
 						{
 							"key": "ID",
-							"value": "684409"
+							"value": "684412"
 						},
 						{
 							"key": "TipoCliente",
@@ -443,12 +498,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/baja?ID_Reserva=58661",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/baja?ID_Reserva=58661",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"baja"
@@ -471,7 +526,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -479,12 +534,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/a2?fecha=2023-11-26",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/a2?fecha=2023-11-26",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -508,7 +563,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -516,12 +571,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/b2?ID_Cliente=684336",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/b2?ID_Cliente=684336",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -545,7 +600,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -553,12 +608,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/c2?desde=2023-11-15&hasta=2023-11-26",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/c2?desde=2023-11-15&hasta=2023-11-26",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -586,7 +641,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -594,12 +649,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/d2?TipoCliente=Individual",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/d2?TipoCliente=Individual",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -623,7 +678,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -631,12 +686,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/e?ID_Cliente=684336",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/e?ID_Cliente=684336",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -660,7 +715,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDEwMjc0MzUsImV4cCI6MTcwMTA4NzQzNSwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjY4NDQwOCwiQ2xhdmUiOiIkMnkkMTAkQ1pTQXN3dFg2U0ZzckhiZC9SbWlLZVoyZUNJTkdhQU5HeFp0bG10L0QwUVl5WTNLclgvY2UifSwiYXBwIjoiU2VndW5kbyBwYXJjaWFsIn0.5C5887GvltbZO7N39GapIr8lWd7QaFVcFeVLR76-pms",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE2NDg5MTIsImV4cCI6MTcwMjE0ODkxMiwiYXVkIjoiZjg3MjI2NmJhOTRjYmY0MTI4MmQxYTMzNjA2Nzg3YWUzZjNkNzFhMyIsImRhdGEiOnsiSUQiOjIsIlVzZXIiOiJyZWNlcDAxIiwiUGFzcyI6IiQyeSQxMCRqQzFxWlhSTGUxV3lkQnZjUzVUSEplOWhoQTRSampCNExLV25VTG9KVEpNTEF3XC9hNFFWdFMiLCJSb2wiOiJSZWNlcGNpb25pc3RhIn0sImFwcCI6IlNlZ3VuZG8gcGFyY2lhbCJ9._GSAlIrJeJR_hGGS9cfrFpiLtisx4mEvsuXFSZw47Rg",
 							"type": "string"
 						}
 					]
@@ -668,12 +723,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/consultar/f?Pago=Tarjeta de credito",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/consultar/f?Pago=Tarjeta de credito",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"consultar",
@@ -714,12 +769,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/cliente/modificar",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/cliente/modificar",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"cliente",
 						"modificar"
@@ -745,7 +800,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"ID_Reserva\": 58661,\n        \"ID_Cliente\": 684412,\n        \"TipoCliente\": \"Corporativo\",\n        \"TipoHabitacion\": \"Doble\",\n        \"Ingreso\": \"2023-11-28\",\n        \"Salida\": \"2023-12-10\",\n        \"ImporteTotal\": 3600,\n        \"Pago\": \"Guita del estanciero\",\n        \"Comentario\": \"Cambio en la forma de pago\"\n    }",
+					"raw": "    {\n        \"ID_Reserva\": 58661,\n        \"ID_Cliente\": 684412,\n        \"TipoCliente\": \"Corporativo\",\n        \"TipoHabitacion\": \"Doble\",\n        \"Ingreso\": \"2023-11-28\",\n        \"Salida\": \"2023-12-10\",\n        \"Importe\": 3600,\n        \"Pago\": \"Guita del estanciero\",\n        \"Comentario\": \"Cambio en la forma de pago\"\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -753,12 +808,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost/SEGUNDO_PARCIAL/app/reserva/modificar",
+					"raw": "localhost/Programacion3-Segundo_Parcial/app/reserva/modificar",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"SEGUNDO_PARCIAL",
+						"Programacion3-Segundo_Parcial",
 						"app",
 						"reserva",
 						"modificar"

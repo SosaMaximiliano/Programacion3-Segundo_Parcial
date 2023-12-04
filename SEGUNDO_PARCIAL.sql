@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-11-2023 a las 03:29:32
+-- Tiempo de generación: 04-12-2023 a las 17:31:27
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.1.17
 
@@ -50,8 +50,13 @@ CREATE TABLE `Cliente` (
 --
 
 INSERT INTO `Cliente` (`ID`, `Nombre`, `Apellido`, `TipoDocumento`, `NroDocumento`, `Clave`, `Pais`, `Ciudad`, `Email`, `Telefono`, `TipoCliente`, `Estado`, `Alta`, `Baja`, `ImagenURL`) VALUES
-(684412, 'Juan Carlos', 'Batman', 'Pasaporte', '25654123', '$2y$10$VVo/.myHY5K6cqtVY1lCEe6VCBUSggeEMywTJrtYK7bJrtju.Iy3u', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-PASAPORTE', 'Inactivo', '2023-11-27 00:35:38', '2023-11-27 01:17:54', './ImagenesDeClientes/684412CO.jpeg'),
-(684418, 'Max', 'Payne', 'DNI', '33456789', '$2y$10$jR/xLPkzlMnN9nXdpngyBeVx4k5CKcjmdRMmXg0Cjq01.2X0RQmm2', 'EEUU', 'New York', 'mail@mail.com', 5556013, 'CORPO-DNI', 'Inactivo', '2023-11-27 00:45:29', '2023-11-27 01:15:09', './ImagenesDeClientes/684418CO.png');
+(684431, 'Nick', 'Mason', 'DNI', '33456789', '$2y$10$k0AWZGm/WyPMneVrfS7Kb.Q520aB/o4yPdM9WedlDXnziqPqk4uY2', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-DNI', 'Activo', '2023-12-02 19:30:57', NULL, './ImagenesDeClientes/684431CO.png'),
+(684432, 'Richard', 'Write', 'DNI', '33456789', '$2y$10$J5hs2f9EtVObdQ2g0w0mG.R153Z0c67rli2HnJYAZ0mSHrUd.xU1u', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-DNI', 'Activo', '2023-12-02 19:32:07', NULL, './ImagenesDeClientes/684432CO.png'),
+(684433, 'Roger', 'Waters', 'DNI', '33456789', '$2y$10$9FrS4nFItcvCsXYe/naskephGj3BP9W6bBVozi5fAoIjwyQWfr.dO', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-DNI', 'Activo', '2023-12-02 19:33:36', NULL, './ImagenesDeClientes/684433CO.png'),
+(684434, 'David', 'Gilmore', 'DNI', '33456789', '$2y$10$xEGSOIwc08j9cp/RUNjI6eWsBmeG2aFWOpWXbaRjiLwOitKLqYSIG', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-DNI', 'Activo', '2023-12-02 19:34:46', NULL, './ImagenesDeClientes/684434CO.png'),
+(684457, 'Moe', 'Howard', 'DNI', '33456789', '$2y$10$ywNqnbnmZAld3BTEE9gaqepg1trWdhHEwBn5UpyRV9MHY1dauugyq', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-DNI', 'Activo', '2023-12-02 21:10:57', NULL, './ImagenesDeClientes/684457CO.png'),
+(684458, 'Curly', 'Howard', 'DNI', '33456789', '$2y$10$J79OIeiyQaAJ5xXayTpjTuKsqFYFBohtztK1MSsqYybzWMil41GHK', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-DNI', 'Activo', '2023-12-02 21:11:19', NULL, './ImagenesDeClientes/684458CO.png'),
+(684459, 'Shemp', 'Howard', 'DNI', '33456789', '$2y$10$stGYNk8sQjg7WasqdCmdyubI1QmN5kwcf90jt7evf9CKEOBzEqAOq', 'Burzaco', 'Wilde', 'correo@correo.com', 3115426, 'CORPO-DNI', 'Activo', '2023-12-02 21:13:22', NULL, './ImagenesDeClientes/684459CO.png');
 
 -- --------------------------------------------------------
 
@@ -86,6 +91,30 @@ INSERT INTO `Reserva` (`ID`, `ID_Cliente`, `TipoCliente`, `TipoHabitacion`, `Ing
 (58660, 684412, 'Corporativo', 'Doble', '2023-11-28', '2023-12-10', 3600, 'Efectivo', '2023-11-27', '2023-11-27', 'Cancelado', NULL),
 (58661, 684412, 'Corporativo', 'Doble', '2023-11-28', '2023-12-10', 3600, 'Guita del estanciero', '2023-11-27', '2023-11-27', 'Activo', 'Cambio en la forma de pago');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Usuario`
+--
+
+CREATE TABLE `Usuario` (
+  `ID` int(11) NOT NULL,
+  `User` varchar(50) NOT NULL,
+  `Pass` varchar(256) NOT NULL,
+  `Rol` varchar(50) NOT NULL,
+  `Alta` datetime NOT NULL,
+  `Baja` datetime DEFAULT NULL,
+  `Estado` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `Usuario`
+--
+
+INSERT INTO `Usuario` (`ID`, `User`, `Pass`, `Rol`, `Alta`, `Baja`, `Estado`) VALUES
+(1, 'eljefe01', '$2y$10$2M5VFJsaKaEN.eFM8rAc6.1/JBxziHjZGxDMd4Ov3VG.HJQxU0bia', 'Gerente', '2023-12-02 16:05:14', NULL, 'Activo'),
+(2, 'recep01', '$2y$10$jC1qZXRLe1WydBvcS5THJe9hhA4RjjB4LKWnULoJTJMLAw/a4QVtS', 'Recepcionista', '2023-12-02 16:21:46', NULL, 'Activo');
+
 --
 -- Índices para tablas volcadas
 --
@@ -103,6 +132,12 @@ ALTER TABLE `Reserva`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indices de la tabla `Usuario`
+--
+ALTER TABLE `Usuario`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -110,13 +145,19 @@ ALTER TABLE `Reserva`
 -- AUTO_INCREMENT de la tabla `Cliente`
 --
 ALTER TABLE `Cliente`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=684419;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=684460;
 
 --
 -- AUTO_INCREMENT de la tabla `Reserva`
 --
 ALTER TABLE `Reserva`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58662;
+
+--
+-- AUTO_INCREMENT de la tabla `Usuario`
+--
+ALTER TABLE `Usuario`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
