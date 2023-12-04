@@ -46,8 +46,7 @@ class Logger
             $ultimaLinea = rtrim($ultimaLinea);
             $valores = explode(';', $ultimaLinea);
             $ultimoValor = end($valores);
-            var_dump($valores);
-            return intval($ultimoValor[3]);
+            return intval($ultimoValor);
         }
         else
             return 0;

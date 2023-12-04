@@ -4,6 +4,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 include_once './Model/Reserva.php';
+include_once './Utils/Logger.php';
 
 class ReservaController
 {
@@ -22,6 +23,7 @@ class ReservaController
         try
         {
             $idReserva = Reserva::AltaReserva($tipoCliente, $idCliente, $ingreso, $salida, $tipoHabitacion, $importe);
+            Logger::LogOK("AltaReserva", $idCliente);
             switch ($tipoCliente)
             {
                 case 'Individual':
@@ -69,6 +71,7 @@ class ReservaController
             try
             {
                 Reserva::BajaReserva($idReserva);
+                Logger::LogOK("BajaReserva", $idReserva);
                 $payload = json_encode("La reserva $idReserva fue cancelada");
                 $response->getBody()->write($payload);
                 return $response->withHeader('Content-Type', 'application/json');
@@ -81,7 +84,7 @@ class ReservaController
             }
             finally
             {
-                Logger::LogTodos("BajaCliente");
+                Logger::LogTodos("BajaReserva");
             }
         }
         else
@@ -110,6 +113,7 @@ class ReservaController
             try
             {
                 Reserva::ModificarReserva($idReserva, $motivo, $tipoCliente, $idCliente, $ingreso, $salida, $tipoHabitacion, $importe, $formaPago);
+                Logger::LogOK("ModificarReserva", $idReserva);
                 $payload = json_encode("La reserva $idReserva fue modificada");
                 $response->getBody()->write($payload);
                 return $response->withHeader('Content-Type', 'application/json');
@@ -122,11 +126,12 @@ class ReservaController
             }
             finally
             {
-                Logger::LogTodos("ModificarCliente");
+                Logger::LogTodos("ModificarReserva");
             }
         }
         else
         {
+            Logger::LogTodos("ModificarReserva");
             $payload = json_encode("Numero de reserva no existe o fue dada de baja");
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -139,6 +144,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasA($fecha);
+            Logger::LogOK("ListarReservasA", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -161,6 +167,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasB($idCliente);
+            Logger::LogOK("ListarReservasB", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -184,6 +191,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasC($desde, $hasta);
+            Logger::LogOK("ListarReservasC", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -206,6 +214,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasD($tipoHabitacion);
+            Logger::LogOK("ListarReservasD", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -228,6 +237,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasA2($fecha);
+            Logger::LogOK("ListarReservasA2", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -250,6 +260,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasB2($idCliente);
+            Logger::LogOK("ListarReservasB2", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -273,6 +284,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasC2($desde, $hasta);
+            Logger::LogOK("ListarReservasC2", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -295,6 +307,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasD2($tipoCliente);
+            Logger::LogOK("ListarReservasD2", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -317,6 +330,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasE($idCliente);
+            Logger::LogOK("ListarReservasE", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
@@ -339,6 +353,7 @@ class ReservaController
         try
         {
             $reservas = Reserva::ListarReservasF($pago);
+            Logger::LogOK("ListarReservasF", NULL);
             $payload = json_encode($reservas);
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');

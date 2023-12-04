@@ -28,7 +28,7 @@ class AuthJWTController
                 $token = AuthJWT::CrearToken($datos);
                 $payload = json_encode($token);
                 $response->getBody()->write($payload);
-                Logger::Log("Login", $usuario[0]->ID, "Log");
+                Logger::LogOK("Login", $usuario[0]->ID);
             }
             else
             {
@@ -39,7 +39,7 @@ class AuthJWTController
         {
             $response->getBody()->write(json_encode(array("mensaje" => "Error, verifique la información")));
         }
-        Logger::Log("Login", $usuario[0]->ID, "LogTodos");
+        Logger::LogTodos("Login");
         return $response->withHeader('Content-Type', 'application/json');
     }
 }

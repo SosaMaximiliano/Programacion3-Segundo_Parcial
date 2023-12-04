@@ -14,7 +14,7 @@ class CheckOtrosMW
         try
         {
             $data = AuthJWT::ObtenerPayload($token);
-            if ($data->Rol == 'Recepcionista' || $data->Rol == 'Cliente')
+            if ($data->data->Rol == 'Recepcionista' || $data->data->Rol == 'Cliente')
                 $response = $handler->handle($request);
             else
                 $response->getBody()->write(json_encode("El usuario no tiene permisos"));
