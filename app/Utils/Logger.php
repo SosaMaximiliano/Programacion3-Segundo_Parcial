@@ -20,15 +20,14 @@ class Logger
 
     public static function LogTodos($metodo)
     {
-        $operacion = self::TraerUltimaOperacion();
         $hoy = new Datetime();
         $data = array(
-            "Fecha" => $hoy->format('d/m/Y;H:i:s'),
+            "Fecha" => $hoy->format('d/m/Y-H:i:s'),
             "Metodo" => $metodo,
         );
 
         $archivo = fopen("LogTodos.txt", "a");
-        fwrite($archivo, "{$data['Fecha']}-{$data['Metodo']}" . "\n");
+        fwrite($archivo, "{$data['Fecha']};{$data['Metodo']}" . "\n");
         fclose($archivo);
         return true;
     }
